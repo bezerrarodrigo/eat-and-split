@@ -47,6 +47,16 @@ export default function App() {
     setShowAddFriend(false);
   }
 
+  function handleBillSplit(value) {
+    setFriends(prevState => prevState.map(friend => {
+      return friend.id === selectedFriend.id ? {
+        ...friend,
+        balance: friend.balance + value
+      } : friend;
+    }));
+    setSelectedFriend(null);
+  }
+
 
   return (
     <div className="app">
@@ -61,7 +71,7 @@ export default function App() {
         <Button
           onClick={handleShowFriendForm}>{showAddFriend ? 'Close' : 'Add Friend'}</Button>
       </div>
-      {selectedFriend && <FormSplitBill friend={selectedFriend}/>}
+      {selectedFriend && <FormSplitBill friend={selectedFriend} onSplitBill={handleBillSplit}/>}
 
     </div>
   );
