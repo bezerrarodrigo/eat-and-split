@@ -1,7 +1,7 @@
 # A bill split app created with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Application to help share account expenses with friends. Simple practical study project but with the fundamental concepts of state management in their basic form.
+Application to help share account expenses with friends.
 
 ## Available Scripts
 
@@ -42,4 +42,4 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Screen
 
-<!--<img src="src/travel-list.jpg"/>-->
+<img src="src/splitBill.png"/>
